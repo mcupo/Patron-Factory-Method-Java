@@ -7,7 +7,9 @@ public class PuertaConBomba extends Puerta {
 		super(habitacion1, habitacion2);
 	}
 
-	public void Entrar(){}
+	public void Entrar(){
+		System.out.println("Implementacion de entrar");
+	}
 
 	@Override
 	public void dibujar() {

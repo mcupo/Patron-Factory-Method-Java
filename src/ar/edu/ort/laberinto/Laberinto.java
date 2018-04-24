@@ -7,7 +7,7 @@ public class Laberinto implements Dibujable {
 	
 	private ArrayList<Habitacion> habitaciones;
 	
-    public void Laberinto() {
+    public Laberinto() {
     	habitaciones = new ArrayList<Habitacion>();
     }
 

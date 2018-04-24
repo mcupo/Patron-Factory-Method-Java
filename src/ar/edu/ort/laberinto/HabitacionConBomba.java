@@ -8,7 +8,6 @@ public class HabitacionConBomba extends Habitacion {
 	public HabitacionConBomba(int numero, String bomba){
 		super(numero);
 		this.bomba = bomba;
-		
 	}
 	
 	public void Entrar() {
