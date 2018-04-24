@@ -10,5 +10,4 @@ public class Test {
 	    dibujoJpg.guardar();
 	    dibujoJpg.cerrar();
 	}
-
 }
