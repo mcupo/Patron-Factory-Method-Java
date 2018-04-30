@@ -4,12 +4,12 @@ package ar.edu.ort.laberinto;
 public class JuegoDelLaberinto {
 	
 	public Dibujable crearLaberinto() {
-		Laberinto unLaberinto	= (Laberinto) fabricarLaberinto();
-		Habitacion habitacion1  = (Habitacion) fabricarHabitacion(1);
-		Habitacion habitacion2  = (Habitacion) fabricarHabitacion(2);
-		Puerta unaPuerta        = (Puerta) FabricarPuerta(habitacion1, habitacion2);
-		unLaberinto.agregarHabitacion(habitacion1);
-		unLaberinto.agregarHabitacion(habitacion2);
+		Dibujable unLaberinto	= fabricarLaberinto();
+		Habitacion habitacion1  = fabricarHabitacion(1);
+		Habitacion habitacion2  = fabricarHabitacion(2);
+		Puerta unaPuerta        = FabricarPuerta(habitacion1, habitacion2);
+		((Laberinto) unLaberinto).agregarHabitacion(habitacion1);
+		((Laberinto) unLaberinto).agregarHabitacion(habitacion2);
 		Dibujable lados[] = {fabricarPared(), unaPuerta, fabricarPared(), fabricarPared()};
 		habitacion1.setLados(lados);
 		//...
@@ -20,15 +20,15 @@ public class JuegoDelLaberinto {
 		return new Laberinto();
 	}
 
-	public Dibujable fabricarHabitacion(int numero) {
+	public Habitacion fabricarHabitacion(int numero) {
 		return new Habitacion(numero);
 	}
 
-	public Dibujable fabricarPared() {
+	public Pared fabricarPared() {
 		return new Pared();
 	}
 	
-	public Dibujable FabricarPuerta(Habitacion habitacion1, Habitacion habitacion2) {
+	public Puerta FabricarPuerta(Habitacion habitacion1, Habitacion habitacion2) {
 		return new Puerta(habitacion1,habitacion2);
 	}
 }
