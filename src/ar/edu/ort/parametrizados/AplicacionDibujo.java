@@ -5,8 +5,8 @@ public class AplicacionDibujo extends Aplicacion {
 
 	@Override
 	public Documento FabricarDocumento(String tipo) {
-		if (tipo == "jpg") return new DocumentoDibujoJPG();
-		if (tipo == "gif") return new DocumentoDibujoGIF();
+		if (tipo.equalsIgnoreCase("jpg")) return new DocumentoDibujoJPG();
+		if (tipo.equalsIgnoreCase("gif")) return new DocumentoDibujoGIF();
 		return new DocumentoDibujoPNG();
 	}
 }
